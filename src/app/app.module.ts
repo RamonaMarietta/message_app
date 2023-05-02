@@ -12,8 +12,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
+import { WelcomeComponent } from './views/welcome/welcome.component';
+import { CreateMessageComponent} from './views/welcome/create-message/create-message.component';
+import { ReceivedMessageComponent } from './views/welcome/received-message/received-message.component';
+import { SentMessageComponent } from './views/welcome/sent-message/sent-message.component';
 
 @NgModule({
   imports: [
@@ -29,8 +31,10 @@ import { RegisterComponent } from './views/register/register.component';
     MatTabsModule,
     MatCheckboxModule,
     MatSnackBarModule,
+    WelcomeComponent,
+    CreateMessageComponent, ReceivedMessageComponent, SentMessageComponent
   ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [AppComponent, WelcomeComponent, CreateMessageComponent, ReceivedMessageComponent, SentMessageComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
