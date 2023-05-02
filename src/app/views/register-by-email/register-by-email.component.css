@@ -3,7 +3,13 @@
   display: block;
   width: 80%;
   margin: 20px auto;
+  
 }
+
+.scale {
+  transform: scale(1.6);
+}
+
 mat-form-field,
 mat-checkbox {
   width: 80%;

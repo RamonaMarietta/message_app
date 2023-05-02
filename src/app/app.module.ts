@@ -12,8 +12,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { LoginComponent } from './views/login/login.component';
-import { RegisterComponent } from './views/register/register.component';
+import { RegisterBySmsComponent } from './views/register-by-sms/register-by-sms.component';
+import {RegisterByEmailComponent} from './views/register-by-email/register-by-email.component';
+import { CodeInputModule } from 'angular-code-input';
 
 @NgModule({
   imports: [
@@ -29,8 +30,13 @@ import { RegisterComponent } from './views/register/register.component';
     MatTabsModule,
     MatCheckboxModule,
     MatSnackBarModule,
+    CodeInputModule
   ],
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AppComponent,
+    RegisterByEmailComponent,
+    RegisterBySmsComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

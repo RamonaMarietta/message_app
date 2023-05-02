@@ -4,24 +4,24 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import Validation from '../../Validations';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-register-by-sms',
+  templateUrl: './register-by-sms.component.html',
+  styleUrls: ['./register-by-sms.component.css'],
 })
-export class RegisterComponent {
+export class RegisterBySmsComponent {
   registerMessage = 'Registered Successfully';
-  passwordHide = true;
-  confirmPasswordHide = true;
+  //passwordHide = true;
+  //confirmPasswordHide = true;
 
   registerForm = this.fb.group(
     {
       email: ['', [Validators.required, Validators.email]],
       userName: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
+      //password: ['', [Validators.required, Validators.minLength(6)]],
+      //confirmPassword: ['', Validators.required],
     },
     {
-      validators: Validation.match('password', 'confirmPassword'),
+      //validators: Validation.match('password', 'confirmPassword'),
     }
   );
 
