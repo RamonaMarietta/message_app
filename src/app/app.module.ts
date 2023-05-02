@@ -17,6 +17,7 @@ import { CreateMessageComponent} from './views/welcome/create-message/create-mes
 import { ReceivedMessageComponent } from './views/welcome/received-message/received-message.component';
 import { SentMessageComponent } from './views/welcome/sent-message/sent-message.component';
 
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,9 +31,8 @@ import { SentMessageComponent } from './views/welcome/sent-message/sent-message.
     MatCardModule,
     MatTabsModule,
     MatCheckboxModule,
-    MatSnackBarModule,
-    WelcomeComponent,
-    CreateMessageComponent, ReceivedMessageComponent, SentMessageComponent
+    MatSnackBarModule
+    
   ],
   declarations: [AppComponent, WelcomeComponent, CreateMessageComponent, ReceivedMessageComponent, SentMessageComponent],
   bootstrap: [AppComponent],
