@@ -12,9 +12,14 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { RegisterBySmsComponent } from './views/register-by-sms/register-by-sms.component';
-import {RegisterByEmailComponent} from './views/register-by-email/register-by-email.component';
+import { RegisterBySmsComponent } from './views/register/register-by-sms/register-by-sms.component';
+import { RegisterByEmailComponent } from './views/register/register-by-email/register-by-email.component';
 import { CodeInputModule } from 'angular-code-input';
+import { LoginBySmsComponent } from './views/login/login-by-sms/login-by-sms.component';
+import { LoginByEmailComponent } from './views/login/login-by-email/login-by-email.component';
+import { MatTableModule } from '@angular/material/table';
+import { LoginComponent } from './views/login/login.component';
+import { RegisterComponent } from './views/register/register.component';
 
 @NgModule({
   imports: [
@@ -30,12 +35,16 @@ import { CodeInputModule } from 'angular-code-input';
     MatTabsModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    CodeInputModule
+    CodeInputModule,
   ],
   declarations: [
     AppComponent,
     RegisterByEmailComponent,
     RegisterBySmsComponent,
+    LoginBySmsComponent,
+    LoginByEmailComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   bootstrap: [AppComponent],
 })

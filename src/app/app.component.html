@@ -1,22 +1,15 @@
-<div>
-  <mat-card class="mat-elevation-z12">
-    <mat-card-title style="text-align:center; margin: 10px;"
-      >Register</mat-card-title >
-    <mat-tab-group
-      mat-stretch-tabs
-      dynamicHeight
-      class="example-stretched-tabs">
-      <mat-tab label="By SMS">
-        <ng-template matTabContent>
-          <app-register-by-sms></app-register-by-sms>
-        </ng-template>
-      </mat-tab>
-      <mat-tab label="By Email">
-        <ng-template matTabContent>
-          <app-register-by-email></app-register-by-email>
-        </ng-template>
-      </mat-tab>
-    </mat-tab-group>
-  </mat-card>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-login></app-login>
+        </div>
+
+    </div> 
+    <div class="row">
+        <div class="col-md-6">
+            <app-register></app-register>
+        </div>
+        
+    </div> 
 </div>
 
