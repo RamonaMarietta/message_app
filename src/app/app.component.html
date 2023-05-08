@@ -1,15 +1,22 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <app-login></app-login>
-        </div>
-
-    </div> 
-    <div class="row">
-        <div class="col-md-6">
-            <app-register></app-register>
-        </div>
-        
-    </div> 
+<div>
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center; margin: 10px;"
+      >LogIn / Register</mat-card-title >
+    <mat-tab-group
+      mat-stretch-tabs
+      dynamicHeight
+      class="example-stretched-tabs">
+      <mat-tab label="LogIn">
+        <ng-template matTabContent>
+          <app-login></app-login>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="Register">
+        <ng-template matTabContent>
+          <app-register></app-register>
+        </ng-template>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
 </div>
 

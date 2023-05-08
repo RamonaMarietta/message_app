@@ -12,6 +12,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { WelcomeComponent } from './views/welcome/welcome.component';
+import { CreateMessageComponent} from './views/welcome/create-message/create-message.component';
+import { ReceivedMessageComponent } from './views/welcome/received-message/received-message.component';
+import { SentMessageComponent } from './views/welcome/sent-message/sent-message.component';
 import { RegisterBySmsComponent } from './views/register/register-by-sms/register-by-sms.component';
 import { RegisterByEmailComponent } from './views/register/register-by-email/register-by-email.component';
 import { CodeInputModule } from 'angular-code-input';
@@ -35,7 +39,6 @@ import { RegisterComponent } from './views/register/register.component';
     MatTabsModule,
     MatCheckboxModule,
     MatSnackBarModule,
-    CodeInputModule,
   ],
   declarations: [
     AppComponent,
@@ -45,6 +48,10 @@ import { RegisterComponent } from './views/register/register.component';
     LoginByEmailComponent,
     LoginComponent,
     RegisterComponent,
+    WelcomeComponent,
+    CreateMessageComponent,
+    ReceivedMessageComponent,
+    SentMessageComponent
   ],
   bootstrap: [AppComponent],
 })

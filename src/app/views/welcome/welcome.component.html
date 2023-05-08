@@ -1,0 +1,38 @@
+<div>
+    <mat-card class="mat-elevation-z12">
+        <mat-card-title style="text-align:center; margin: 10px;">Welcome </mat-card-title>
+
+        <mat-card>
+            <mat-card-content>User</mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-content>Connection date</mat-card-content>
+        </mat-card>
+        <mat-tab-group mat-stretch-tabs dynamicHeight class="example-stretched-tabs">
+            <mat-tab label="create message">
+                <ng-template matTabContent>
+                    <app-create-message>
+                    </app-create-message>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="read message">
+                <ng-template matTabContent>
+                    <app-received-message>
+                    </app-received-message>
+                </ng-template>
+            </mat-tab>
+            <mat-tab label="sent message">
+                <ng-template matTabContent>
+                    <app-sent-message>
+                    </app-sent-message>
+                </ng-template>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+    <mat-tab-group>
+        <mat-tab label=> create message </mat-tab>
+        <mat-tab label=> received message</mat-tab>
+        <mat-tab label=> sent message</mat-tab>
+    </mat-tab-group>
+
+</div>
