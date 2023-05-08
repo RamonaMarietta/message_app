@@ -3,23 +3,23 @@
     <mat-form-field>
       <input
         matInput
-        placeholder="Email"
+        placeholder="SMS"
         required
-        name="email"
-        formControlName="email"
+        name="sms"
+        formControlName="code"
       />
-      <mat-icon matSuffix>email</mat-icon>
+      <mat-icon matSuffix>apple</mat-icon>
       <mat-error *ngIf="handleErrorLogin('email', 'required')"
         >Email is required</mat-error
       >
-      <mat-error *ngIf="handleErrorLogin('email', 'email')"
+      <mat-error *ngIf="handleErrorLogin('email', 'code')"
         >Email should be of Valid Format</mat-error
       >
     </mat-form-field>
     <mat-form-field>
       <input
         matInput
-        placeholder="Password"
+        placeholder="Code"
         type="password"
         required
         minlength="6"

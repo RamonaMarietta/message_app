@@ -11,7 +11,7 @@ export class LoginBySmsComponent {
   loginMessage = 'Logged In Successfully';
 
   loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    email: ['', [Validators.required, Validators.pattern]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
@@ -21,11 +21,11 @@ export class LoginBySmsComponent {
   ) {}
 
   /* Get errors */
-  public handleErrorLogin = (controlName: string, errorName: string) => {
+  public handleErrorLogin = (email: string, errorName: string) => {
     return (
-      this.loginForm.get(controlName).touched &&
-      this.loginForm.get(controlName).errors &&
-      this.loginForm.get(controlName).hasError(errorName)
+      this.loginForm.get(email).touched &&
+      this.loginForm.get(email).errors &&
+      this.loginForm.get(email).hasError(errorName)
     );
   };
 
