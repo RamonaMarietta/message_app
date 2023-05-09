@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NonNullableFormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+
+
 
 @Component({
   selector: 'app-login-by-sms',
@@ -10,8 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class LoginBySmsComponent {
   loginMessage = 'Logged In Successfully';
 
-  loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.pattern]],
+  loginFormPhoneNumber = this.fb.group({
+    phone: ['', [Validators.required, Validators.pattern]],
     password: ['', [Validators.required, Validators.minLength(6)]],
   });
 
@@ -20,16 +23,21 @@ export class LoginBySmsComponent {
     private snackBar: MatSnackBar
   ) {}
 
+
   /* Get errors */
-  public handleErrorLogin = (email: string, errorName: string) => {
+  public handleErrorLogin = (phoneNumber: string, errorName: string) => {
     return (
-      this.loginForm.get(email).touched &&
-      this.loginForm.get(email).errors &&
-      this.loginForm.get(email).hasError(errorName)
+      this.loginFormPhoneNumber.get(phoneNumber).touched &&
+      this.loginFormPhoneNumber.get(phoneNumber).errors &&
+      this.loginFormPhoneNumber.get(phoneNumber).hasError(errorName)
     );
   };
 
+
   openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action);
+    this.snackBar.open(message, action, {
+      duration: 2000,
+    });
+    }
   }
-}
+

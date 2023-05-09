@@ -24,10 +24,15 @@ import { LoginByEmailComponent } from './views/login/login-by-email/login-by-ema
 import { MatTableModule } from '@angular/material/table';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { Route, RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: LoginByEmailComponent},
+  { path: '', component: LoginBySmsComponent}
+];
 
 @NgModule({
   imports: [
-    BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
@@ -39,6 +44,8 @@ import { RegisterComponent } from './views/register/register.component';
     MatTabsModule,
     MatCheckboxModule,
     MatSnackBarModule,
+    RouterModule.forRoot(appRoutes)
+  
   ],
   declarations: [
     AppComponent,

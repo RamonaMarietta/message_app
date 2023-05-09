@@ -9,8 +9,12 @@ import Validation from '../../../Validations';
   styleUrls: ['./register-by-email.component.css'],
 })
 export class RegisterByEmailComponent {
-  registerMessage = 'Registered Successfully';
 
+
+
+
+  
+  registerMessage = 'Registered Successfully';
   codeMessage = 'Code sent successfully';
 
   registerForm = this.fb.group(

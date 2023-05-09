@@ -1,25 +1,25 @@
 <mat-card-content>
-  <form [formGroup]="loginForm">
+  <form [formGroup]="loginFormPhoneNumber">
     <mat-form-field>
       <input
         matInput
-        placeholder="SMS"
+        placeholder="Phone"
         required
-        name="sms"
-        formControlName="code"
+        name="phone"
+        formControlName="phone"
       />
-      <mat-icon matSuffix>apple</mat-icon>
-      <mat-error *ngIf="handleErrorLogin('email', 'required')"
-        >Email is required</mat-error
+      <mat-icon matSuffix>phone</mat-icon>
+      <mat-error *ngIf="handleErrorLogin('phone', 'required')"
+        >Phone is required</mat-error
       >
-      <mat-error *ngIf="handleErrorLogin('email', 'code')"
-        >Email should be of Valid Format</mat-error
+      <mat-error *ngIf="handleErrorLogin('phone', 'phone')"
+        >Phone should be of Valid Format</mat-error
       >
     </mat-form-field>
     <mat-form-field>
       <input
         matInput
-        placeholder="Code"
+        placeholder="Password"
         type="password"
         required
         minlength="6"
@@ -32,6 +32,9 @@
       <mat-error *ngIf="handleErrorLogin('password', 'minlength')"
         >Password must be of length 6</mat-error
       >
+      <mat-error *ngIf="handleErrorLogin('password', 'maxlength')"
+      >Password must be of length 6</mat-error
+    >
       <mat-icon matSuffix>lock</mat-icon>
     </mat-form-field>
     <mat-checkbox>Remember Me!</mat-checkbox>
@@ -39,11 +42,11 @@
       mat-raised-button
       color="primary"
       class="login-button"
-      [disabled]="!loginForm.valid"
-      (click)="openSnackBar(loginMessage, 'Dismiss')"
+      [disabled]="!loginFormPhoneNumber.valid"
+      (click)="openSnackBar(loginMessage, 'Close')"
+      duration: 3000,
     >
       LogIn
     </button>
-
   </form>
 </mat-card-content>
